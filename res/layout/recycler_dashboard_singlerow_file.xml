@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="140dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:layout_margin="6dp"
+    app:cardCornerRadius="4dp">
+<LinearLayout
+    android:id="@+id/llcontent"
+    android:layout_width="match_parent"
+    android:layout_height="140dp"
+    android:orientation="horizontal"
+    android:background="#ffffff"
+    android:weightSum="6">
+
+    <!--The weight sum property is used to divide the layout into
+    different parts and then giving each layout a particular weight
+    gives it that amount of space on the screen-->
+
+
+    <!--Since each parent layout will have a specific weight, we need
+    not give any width to those layout-->
+<!--scaleType="centerCrop"-->
+    <ImageView
+        android:id="@+id/imgBookImage"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_weight="1.5"
+        android:padding="5dp"
+
+        android:src="@mipmap/ic_launcher"
+        android:layout_gravity="center"/>
+
+    <RelativeLayout
+        android:layout_weight="3.3"
+        android:layout_width="0dp"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/txtBookName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/name_of_the_book"
+            android:textStyle="bold"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="25dp"
+            android:padding="0dp"
+            android:textSize="18sp"
+            android:textColor="#000000"/>
+
+        <TextView
+            android:id="@+id/txtBookAuthor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtBookName"
+            android:layout_marginLeft="5dp"
+            android:text="@string/name_of_the_author"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/black"
+            android:padding="0dp"
+            android:textSize="13sp"/>
+
+        <TextView
+
+            android:id="@+id/txtBookPrice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtBookAuthor"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="5dp"
+
+
+            android:text="@string/rs_299"
+            android:textColor="#357a38"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+
+    <!--Many times we see that texts have an image along with them to
+    their right or left. This is added with the help of the
+    drawableLeft (or drawableRight and so on) attribute-->
+
+    <TextView
+        android:id="@+id/txtBookRating"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:padding="0dp"
+        android:layout_marginTop="25dp"
+        android:drawableRight="@drawable/ic_rating"
+
+        android:layout_height="wrap_content"
+        android:textColor="#ffca28"
+        android:text="@string/_4_5"
+        android:drawablePadding="4dp"
+        android:textSize="17sp"
+        android:textStyle="bold">
+
+    </TextView>
+
+</LinearLayout>
+</androidx.cardview.widget.CardView>
